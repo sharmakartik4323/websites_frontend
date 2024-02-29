@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        cursor: default;
+      }
+      .head {
+        display: flex;
+        height: 120px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        /*margin-top: -7%;*/
+      }
+      .head .ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+      .head .logo h1 {
+        letter-spacing: -10px;
+        color: rgb(255, 145, 0);
+        font-size: 60px;
+        cursor: default;
+      }
+      .logo {
+        text-align: center;
+        line-height: 34px;
+      }
+      .main {
+        display: flex;
+        color: #000;
+        width: 100%;
+        height: 500px;
+        position: relative;
+      }
+      .main h1 {
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(270deg);
+        font-size: 216px;
+        font-weight: 100;
+        background-image: linear-gradient(#fff 50%, rgb(255, 145, 0) 50%);
+        background-clip: text;
+        color: transparent;
+        font-family: "Times New Roman", Times, serif;
+        letter-spacing: -40px;
+        cursor: default;
+      }
+      .main1 {
+        display: flex;
+        width: 94%;
+        margin: 3%;
+        position: relative;
+      }
+      .main1 > .main1-1 {
+        width: 50%;
+      }
+      .main1 > .main1-2 > h1 {
+        color: rgb(255, 145, 0);
+        font-size: 60px;
+      }
+      .main1 > .main1-2 > .button {
+        margin-top: 20px;
+      }
+      .main1 > .main1-1 > img {
+        height: 400px;
+        width: 400px;
+        margin: 5% 0% 0% 10%;
+      }
+      .main1 > .box {
+        height: 200px;
+        width: 200px;
+        border: solid rgb(255, 145, 0);
+        position: absolute;
+        z-index: -1;
+        left: 2%;
+        top: 1%;
+      }
+      .main1 > h1 {
+        font-size: 550px;
+        color: rgba(255, 145, 0, 0);
+        position: absolute;
+        left: 20%;
+        background-image: linear-gradient(
+          to right,
+          rgba(1, 1, 1, 0.2) 57.2%,
+          rgb(255, 145, 0) 40%
+        );
+        -webkit-background-clip: text;
+        top: -18%;
+      }
+      .main1 > .main1-2 {
+        width: 50%;
+        margin-top: 100px;
+      }
+      .sec3 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+      .sec3 > img {
+        width: 22%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 3%;
+        box-shadow: 2px 2px gray;
+      }
+      .sec3 > img:hover {
+        /*position: absolute;*/
+        /*z-index: 1;*/
+        width: 23%;
+        height: 305px;
+      }
+      .button {
+        background-color: black;
+        color: white;
+        width: 180px;
+        height: 50px;
+        border-radius: 10px;
+      }
+      .button:hover {
+        background-color: aqua;
+        cursor: pointer;
+        color: black;
+      }
+      .sec2 {
+        position: relative;
+        width: 94%;
+        margin: 3% 3% 3% 3%;
+        overflow: hidden;
+      }
+      .sec2 > h1 {
+        position: absolute;
+        top: 40%;
+        left: -10%;
+        font-size: 400px;
+        transform: rotate(18deg);
+        color: rgba(255, 145, 0, 0.5);
+      }
+      .sec2 > p {
+        position: absolute;
+        font-size: 400px;
+        left: 5%;
+        top: 8%;
+        transform: translate(350%, 50%) rotate(10deg);
+        color: rgba(255, 145, 0, 0.5);
+      }
+      .sec4 {
+        display: flex;
+        width: 94%;
+        margin: 3%;
+        gap: 15px;
+        justify-content: center;
+        position: relative;
+      }
+      .sec4 > img {
+        height: 300px;
+        width: 30%;
+        border-radius: 2%;
+      }
+      .sec4 > img:hover {
+        box-shadow: -2px -2px grey;
+      }
+      .sec4 > #omg {
+        object-fit: cover;
+        object-position: 0% 0%;
+      }
+      .sec4 > .arow {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(255, 145, 0, 0.5);
+        border: solid #000;
+      }
+      .sec4 > .arow:hover {
+        background-color: blueviolet;
+        color: white;
+        border: solid #fff;
+      }
+      #left {
+        position: absolute;
+        top: 45%;
+        left: 2.7%;
+      }
+      #right {
+        position: absolute;
+        top: 45%;
+        left: 95%;
+      }
+      .addr {
+        display: flex;
+        background-color: rgb(136, 73, 50);
+        height: 200px;
+      }
+      .cs {
+        width: 45%;
+        font-size: 50px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hr {
+        height: 80%;
+        margin-top: 1.5%;
+      }
+      .AD {
+        margin: 4%;
+      }
+      .foot {
+        margin: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .foot > .feet {
+        width: 25%;
+      }
+      .feet > h1 {
+        padding-left: 60px;
+        letter-spacing: -10px;
+        color: rgb(255, 145, 0);
+        font-size: 50px;
+      }
+      .foot > .feet > .mod {
+        margin-left: 80px;
+        line-height: 5px;
+      }
+      .p2 {
+        display: flex;
+        margin: 20px 0px 0px 0px;
+      }
+      .p3 {
+        margin-left: 10px;
+      }
+      .foot > .feet > .ul {
+        list-style: none;
+      }
+      .vv {
+        margin-left: -1.4%;
+      }
+      .line {
+        display: flex;
+      }
+      .linee {
+        width: 86%;
+        position: relative;
+        margin-left: 7%;
+      }
+      .heading {
+        position: absolute;
+        left: 48%;
+        background-color: white;
+        margin-top: -1%;
+        padding: 0px 4px 0px 4px;
+      }
+      .headingg {
+        position: absolute;
+        left: 40%;
+        background-color: white;
+        margin-top: -1%;
+        padding: 0px 15px 0px 15px;
+      }
+      .hrla {
+        margin-bottom: 3%;
+      }
+      .leh {
+        object-position: 0% 2%;
+      }
+      .lehh {
+        object-position: 0% 4%;
+      }
+      .imi {
+        object-fit: cover;
+        object-position: 0% 8%;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      a:hover {
+        color: blue;
+      }
+      .whatsapp {
+        z-index: 1;
+        position: sticky;
+        left: 90%;
+        top: 80%;
+        height: 100px;
+        width: 100px;
+        opacity: 90%;
+        /*border-radius: 50%;*/
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://pluspng.com/img-png/whatsapp-logo-png-whatsapp-logo-png-transparent-amp-svg-vector-pluspng-2400x2400.png"
+      class="whatsapp"
+    />
+    <header class="head">
+      <div class="logo">
+        <h1>VOCE</h1>
+        <pre>M O D E L S</pre>
+      </div>
+      <div>
+        <ul class="ul">
+          <li><a href="#women">Womens</a></li>
+          <li><a href="#men">Mens</a></li>
+          <li>T-shirt</li>
+          <li>View Handwork</li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contacts</a></li>
+          <li>English</li>
+          <li>+</li>
+        </ul>
+      </div>
+    </header>
+    <section class="main">
+      <h1>VOCE</h1>
+      <img
+        src="https://i.pinimg.com/originals/36/14/74/361474441a42250934a97ecc46e2de61.jpg"
+        width="50%"
+        class="imi"
+      />
+      <img
+        src="https://cdn.homeaddict.io/wp-content/uploads/2020/01/shutterstock_1188628618-1.jpg"
+        width="50%"
+      />
+    </section>
+    <section class="main1" id="service">
+      <div class="box"></div>
+      <h1 class="vv">V</h1>
+      <div class="main1-1">
+        <img
+          src="https://i.pinimg.com/736x/ca/2a/65/ca2a65bd6925c4309fbe12893bf0fe62--april--stella-maxwell.jpg"
+        />
+      </div>
+      <div class="main1-2">
+        <h4>TEXT</h4>
+        <h1>VOCE MODELS</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti,
+          aspernatur quos sequi vero nesciunt eveniet velit culpa maiores magnam
+          necessitatibus at libero error aperiam in animi deserunt cumque.
+          Blanditiis, mollitia. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Facilis suscipit incidunt, repellendus corrupti esse
+          placeat? Eum, aspernatur dolorum cupiditate autem, ipsam delectus
+          mollitia, in omnis a porro cum ipsa necessitatibus!
+        </p>
+        <button class="button">CLICK BUTTON</button>
+      </div>
+    </section>
+    <section class="linee">
+      <h3 class="heading">WOMENS</h3>
+      <hr />
+    </section>
+    <main class="sec2">
+      <h1>C</h1>
+      <p>O</p>
+      <section class="sec3" id="women">
+        <img
+          src="https://i.pinimg.com/originals/fd/21/41/fd21419275236bb153de3c8dcbbf3bf9.jpg"
+          class="lehh"
+        />
+        <img
+          src="https://weddingdressesguide.com/wp-content/uploads/2012/03/indian-wedding-dresses-a-line-with-cap-sleeeves-with-cape-gold-utsav-fashion.jpg"
+          class="lehh"
+        />
+        <img
+          src="https://cdn.shopify.com/s/files/1/1450/2422/products/C4_1600x.png?v=1606394761"
+          class="leh"
+        />
+        <img
+          src="https://gallery.southindianactress.in/2020/03/Kalapala-Mounika-15-576x720.jpg"
+        />
+        <img
+          src="https://i.pinimg.com/736x/a8/ce/b3/a8ceb37b0c6e1d4b65471db44bde9e60.jpg"
+          class="leh"
+        />
+        <img
+          src="https://th.bing.com/th/id/OIP.Dg4XHo4KBjifaS259AuetQHaKT?rs=1&pid=ImgDetMain"
+        />
+        <img
+          src="https://i.pinimg.com/736x/b0/92/4a/b0924a616624e21da6804254e36ac924--female-models-role-models.jpg"
+        />
+        <img
+          src="https://qph.fs.quoracdn.net/main-qimg-426816df207037bba4628b9a368b63c0"
+          class="leh"
+        />
+        <button class="button">BUTTON</button>
+      </section>
+      <section class="linee">
+        <h3 class="heading">MENS</h3>
+        <hr class="hrla" />
+      </section>
+      <section class="sec3" id="men">
+        <img
+          src="https://th.bing.com/th/id/OIP._-yeBrLh8uaw-SwA8sdLZgAAAA?rs=1&pid=ImgDetMain"
+          class="leh"
+        />
+        <img
+          src="https://www.el-style.com/blog/articles/1057-mens-fall-street-casual-style/img_10.jpg"
+          class="leh"
+        />
+        <img
+          src="https://th.bing.com/th/id/R.0ffdc3f8b94daa8751c50531f4889ed9?rik=BPXFTPanCaTcng&riu=http%3a%2f%2fell.h-cdn.co%2fassets%2f15%2f04%2f461731676_10.jpg&ehk=AeXd%2bZ3A58lgMoBEOd74Sr4waY%2b65cwpByRR7cTSIcc%3d&risl=&pid=ImgRaw&r=0"
+          class="lehh"
+        />
+        <img
+          src="https://cdn.lookastic.com/looks/overcoat-suit-dress-shirt-large-75235.jpg"
+          class="lehh"
+        />
+        <img
+          src="https://i.pinimg.com/originals/10/88/7d/10887dd6d20e421dbcb0cf7b493b4ca0.jpg"
+          class="lehh"
+        />
+        <img
+          src="https://i.pinimg.com/originals/f9/29/ac/f929ac75b5d6f67aeccc35e9cfdb12a2.jpg"
+          class="lehh"
+        />
+        <img
+          src="https://www.instaloverz.com/wp-content/uploads/2017/03/7.-Men-Summer-Fashion-Style.jpg"
+          class="lehh"
+        />
+        <img
+          src="https://th.bing.com/th/id/R.9399479d7a47d46c50d66382a50c4846?rik=tIT1643EyCEuew&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2014%2f10%2f51.jpg&ehk=3WZ3kthYG%2bNUN2EbpuMVEhiWtmnoLppASXlpxOKkX5A%3d&risl=&pid=ImgRaw&r=0"
+          class="lehh"
+        />
+        <button class="button">BUTTON</button>
+      </section>
+    </main>
+    <section class="linee">
+      <h3 class="headingg">VOCE MOTHER AGENCY</h3>
+      <hr />
+    </section>
+    <section class="sec4">
+      <button class="arow" id="left"><</button>
+      <button class="arow" id="right">></button>
+      <img
+        src="https://www.stylesgap.com/wp-content/uploads/2016/07/Top-Ten-Leading-Most-Popular-Female-Indian-Fashion-Models-Super-Models-of-India-10.jpg"
+      />
+      <img
+        id="omg"
+        src="https://www.instaloverz.com/wp-content/uploads/2017/03/7.-Men-Summer-Fashion-Style.jpg"
+      />
+      <img
+        src="https://ilarge.lisimg.com/image/24709032/750full-patrycja-bara%C5%84ska.jpg"
+      />
+    </section>
+    <section class="main1">
+      <div class="box"></div>
+      <h1>E</h1>
+      <div class="main1-1">
+        <img
+          src="https://www.stylevore.com/wp-content/uploads/2019/12/75291144_436827977013883_9051768023059706037_n.jpg"
+        />
+      </div>
+      <div class="main1-2">
+        <h1>BE A MODEL</h1>
+        <div class="p2">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti,
+            aspernatur quos sequi vero nesciunt eveniet velit culpa maiores
+            magnam necessitatibus at libero error aperiam in
+          </p>
+          <hr width="5px" />
+          <p class="p3">
+            animi deserunt cumque. Blanditiis, mollitia. Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Facilis suscipit incidunt,
+            repellendus corrupti esse placeat? Eum, aspernatur dolorum
+            cupiditate autem, ipsam delectus mollitia, in omnis a porro cum ipsa
+            necessitatibus!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="addr" id="contact">
+      <div class="cs">CONTACT US</div>
+      <hr class="hr" />
+      <address class="AD">
+        <h3>Office A</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem a
+          odit architecto
+        </p>
+        <p>9876543210</p>
+        <p>female@email.com</p>
+      </address>
+      <address class="AD">
+        <h3>Office B</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta harum
+          ipsum iure
+        </p>
+        <p>978657564543</p>
+        <p>mail@gmail.com</p>
+      </address>
+    </section>
+    <section class="foot">
+      <div class="feet">
+        <h1>VOCE</h1>
+        <p class="mod">M O D E L S</p>
+      </div>
+      <div class="feet">
+        <h4>Heading</h4>
+        <p>asd</p>
+        <p>asd</p>
+        <p>asd</p>
+        <p>asd</p>
+        <p>asd</p>
+      </div>
+      <div class="feet">
+        <h4>Heading</h4>
+        <ul class="ul">
+          <li>Women</li>
+          <li>Men</li>
+          <li>T-shirt</li>
+          <li>View Handwork</li>
+        </ul>
+      </div>
+      <div class="feet">
+        <h4>About</h4>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+          animi ea blanditiis repellendus, quis facere rem nam, molestias, hic
+          commodi quae dicta cumque assumenda iusto dolor tempore possimus culpa
+          quod!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
